@@ -11,7 +11,7 @@
 
 <body>
 
-  <button data-person=""
+  
 
 
 
@@ -26,11 +26,25 @@
   // Event listener for all button elements //
   $("button").on("click", function() {
 
-    // For loop to help display topics as buttons //
-    for (i = 0; i < topics.length; i++) {
+    var topics = $(this).attr([i]);
 
-    }
-  }
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+      topics + "&api_key=HT501ZY2B0nY6zop9KdkAUZjCPQmpWJ0=10";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+
+      .then(function(response) {
+
+        // For loop to help display topics as buttons //
+        for (i = 0; i < topics.length; i++) {
+        var 
+
+        }
+      });
+  });
 
 
 
