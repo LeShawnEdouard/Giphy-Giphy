@@ -1,3 +1,7 @@
 body {
     background-image: url("../images/wheat.png");
 }
+
+.jumbotron {
+    background-color: darkslategray;
+}
