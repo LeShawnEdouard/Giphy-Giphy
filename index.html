@@ -1,15 +1,30 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>What Matters to Me</h1>      
+      <form>
+          <span id="todo-item">New Topic <input id="to-do" type="text" ><input id="new-topic" value="Add Item" type="submit"></span>
+      </form>
+    </div>     
+  </div>
+
+<hr>
+
+
   <!-- Div section to create buttons for topics -->
   <div class="World Hunger"></div>
   <div class="Clean Water"></div>
@@ -25,47 +40,7 @@
   <div class="Make A Difference"></div>
 
 
-
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-
-  // Array of default topics upon page load //
-  var topics = ["World Hunger", "Clean Water", "Poverty", 
-  "Helping Hand", "Giving", "Love", "Gratitude", "Smile", "Hugs", 
-  "Commitment", "Change This World", "Make A Difference"];
-
-  // Event listener for all button elements //
-  $("button").on("click", function() {
-
-    var topics = $(this).attr([i]);
-
-    // Constructing a URL to search Giphy for the topics in the array //
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      topics + "&api_key=HT501ZY2B0nY6zop9KdkAUZjCPQmpWJ0=10";
-
-    // Ajax call that will return a promise //
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-
-      // After the data comes back from the API //
-      .then(function(response) {
-
-        // For loop to help display topics as buttons //
-        for (var i = 0; i < topics.length; i++) {
-        var 
-
-        }
-      });
-  });
-
-
-
-
-  </script>  
 </body>
+
+
 </html>
