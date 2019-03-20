@@ -9,4 +9,7 @@ body {
 
 button {
     color: darkslategray;
+    background-color: wheat;
+    border-color: wheat;
+    border-radius: 2px;
 }

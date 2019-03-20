@@ -67,6 +67,7 @@
     });
     $(document).on("click",".gifs", function(event) {
         var state = $(this).attr("status-state");
+        if ("status-state" === "image-still", )
         console.log("this is working");
         console.log(this);
         console.log(state)
