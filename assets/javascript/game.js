@@ -67,11 +67,12 @@
     });
     $(document).on("click",".gifs", function(event) {
         var state = $(this).attr("status-state");
-        if (state === "image-still") {
-          $(this).attr("src", $(this.attr("image-animate"));
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("image-animate"));
           $(this).attr("status-state", "image-animate");
         } else {
-          $(this).attr("")
+          $(this).attr("src", $(this).attr("image-still"));
+          $(this).attr("status-state", "image-still");
         }
         console.log("this is working");
         console.log(this);
