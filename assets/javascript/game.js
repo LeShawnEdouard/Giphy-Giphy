@@ -69,6 +69,7 @@
 
     // On click function to toggle the gifs from still to animate //
     $(document).on("click",".gifs", function(event) {
+        console.log(this, 'this before state');
         var state = $(this).attr("status-state");
         if (state === "still") {
           $(this).attr("src", $(this).attr("image-animate"));
@@ -76,10 +77,23 @@
         } else {
           $(this).attr("src", $(this).attr("image-still"));
           $(this).attr("status-state", "still");
+
         }
-        console.log("this is working");
-        console.log(this);
-        console.log(state)
+
     })
+
+
   });
 
+  $("#form").submit(function (e){
+    var newButton = $("#to-do").val()
+    console.log(newButton);
+    e.preventDefault();
+    console.log("this is working");
+
+    var newTopic = $("<button>");
+    newTopic.attr("data-topic", newButton);
+
+    $(".jumbotron").text(newButton);
+    $(".jumbotron").append(newTopic);
+})

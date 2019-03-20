@@ -16,8 +16,8 @@
     <div class="jumbotron">
       <h1>What Matters to Me</h1>
       <!-- Form used to add a new topic/button in Jumbotron -->    
-      <form>
-          <span id="todo-item">New Topic <input id="to-do" type="text" ><input id="new-topic" value="Add Item" type="submit"></span>
+      <form id="form">
+          <input id="to-do" type="text" ><input id="new-topic" value="Add Item" type="submit">
       </form><br><hr>
       <!-- Buttons for default topics -->
       <button data-topic="World Hunger">World Hunger</button>
@@ -37,7 +37,8 @@
 
 <hr>
 
-<div class="container-fluid" id="gifs-appear-here">
+<div class="row">
+<div id="gifs-appear-here">
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
