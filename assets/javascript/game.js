@@ -8,7 +8,7 @@
   // Event listener for all button elements //
   $("button").on("click", function(event) {
 
-
+    // Adding a data-topic attribute to the button //
     var topic = $(this).attr("data-topic");
 
     event.preventDefault();
@@ -27,8 +27,9 @@
       // After the data comes back from the API //
       .then(function(response) {
           
+        // Storing the response into the topics variable //
         var topics = response.data
-        console.log(response.data);
+    
         // For loop to help display topics as buttons //
         for (var i = 0; i < topics.length; i++) {
         
@@ -40,9 +41,9 @@
 
             // Storing the results topic's rating //
             var rating = topics[i].rating;
-
+            console.log(rating);
             // Creating a paragraph tag with the result topic's rating //
-            var p = $("<p>").text("Rating:" + rating);
+            var p = $("<p>").text("Rating:" + topics[i].rating);
 
             // Creating an image tag //
             var topicImage = $("<img>");
@@ -65,6 +66,8 @@
           }
         }
     });
+
+    // On click function to toggle the gifs from still to animate //
     $(document).on("click",".gifs", function(event) {
         var state = $(this).attr("status-state");
         if (state === "still") {
@@ -72,7 +75,7 @@
           $(this).attr("status-state", "image-animate");
         } else {
           $(this).attr("src", $(this).attr("image-still"));
-          $(this).attr("status-state", "image-still");
+          $(this).attr("status-state", "still");
         }
         console.log("this is working");
         console.log(this);
