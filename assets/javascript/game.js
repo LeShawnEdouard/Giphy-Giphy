@@ -6,12 +6,12 @@
   
 
   // Event listener for all button elements //
-  $("button").on("click", function(event) {
-
+  $(".container").on("click", "button", function(event) {
+    event.preventDefault();
     // Adding a data-topic attribute to the button //
     var topic = $(this).attr("data-topic");
-
-    event.preventDefault();
+    console.log(topic);
+    
 
     // var inputArtist = $("new-topic").val().trim();
 
@@ -68,7 +68,7 @@
     });
 
     // On click function to toggle the gifs from still to animate //
-    $(document).on("click",".gifs", function(event) {
+    $(".row").on("click",".gifs", function(event) {
         console.log(this, 'this before state');
         var state = $(this).attr("status-state");
         if (state === "still") {
@@ -94,6 +94,8 @@
     var newTopic = $("<button>");
     newTopic.attr("data-topic", newButton);
 
-    $(".jumbotron").text(newButton);
+    newTopic.text(newButton);
     $(".jumbotron").append(newTopic);
+
+
 })
