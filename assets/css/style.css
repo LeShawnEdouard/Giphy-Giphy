@@ -1,3 +1,7 @@
+html {
+    overflow-x:hidden;
+    margin-bottom: 15px;
+}
 body {
     background-image: url("../images/wheat.png");
 }
@@ -13,6 +17,3 @@ button {
     border-color: wheat;
     border-radius: 2px;
 }
-/* #gifs-appear-here {
-    align: right;
-} */
